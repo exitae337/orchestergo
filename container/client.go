@@ -131,7 +131,9 @@ func (c *ContainerClient) GetContainerOptions(ctx context.Context, containerID s
 	return info.State.Status, nil
 }
 
-// Util funcs
+// Util functions
+
+// Nano CPU parser for Docker config
 func parseCPU(cpuStr string) int64 {
 	if cpuStr == "" {
 		return 0
@@ -146,6 +148,7 @@ func parseCPU(cpuStr string) int64 {
 	return int64(cpu * 1000000000)
 }
 
+// Memory parser for Docker config
 func parseMemory(memoryStr string) int64 {
 	if memoryStr == "" {
 		return 0
