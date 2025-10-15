@@ -5,6 +5,7 @@ go 1.24.3
 require (
 	github.com/docker/docker v28.4.0+incompatible
 	github.com/docker/go-connections v0.6.0
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
